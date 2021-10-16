@@ -26,11 +26,11 @@ const ButtonStyle = styled.div`
           : " 2px solid var(--white)"};
     }
   }
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     .button {
       font-size: 1.8rem;
     }
-  }
+  } */
 `;
 
 export function Button({ btnLink = "test", children, outline = false }) {
