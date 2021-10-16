@@ -4,11 +4,11 @@ import styled from "styled-components";
 const ButtonStyle = styled.div`
   margin-top: 2rem;
   .button {
-    font-size: 2.2rem;
+    /* font-size: 2.2rem; */
     background-color: ${(props) =>
       props.outline ? "var(--secun-color)" : "var(--main-color)"};
-    padding: 0.5em 1.3em;
-    border-radius: 12px;
+    padding: 0.4em 1.3em;
+    border-radius: 7px;
 
     border: ${(props) =>
       props.outline
