@@ -12,11 +12,10 @@ const NavMenuStyles = styled.nav`
   justify-content: center;
   width: 100%;
   height: 70px;
-  background-color: #f0f0ff;
-  color: var(--font-color-1);
+  background-color: transparent;
+
   .wrapper {
     width: 100%;
-    /* max-width: 1300px; */
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -24,10 +23,9 @@ const NavMenuStyles = styled.nav`
     margin: auto;
   }
   .nav__logo {
-    /* margin-left: 1rem; */
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    width: 18%;
     img {
       width: 100%;
     }
@@ -43,26 +41,27 @@ const NavMenuStyles = styled.nav`
     display: flex;
     height: 100%;
     align-items: center;
+    margin-right: 1.5rem;
   }
   .nav__link {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 0.5rem 2.5rem;
+    padding: 0.3rem 1.2rem;
     color: var(--font-color-2);
-
+    border: solid 1px transparent;
     font-size: 1rem;
     font-weight: 300;
     cursor: pointer;
-    border-radius: 10px;
-    /* transition: 0.5s all ease; */
+    border-radius: 6px;
+    transition: 0.5s all ease;
     &:hover {
       color: var(--white);
-      /* transition: 0.3s ease; */
-      background-color: var(--tercer-color);
-      border-radius: 4px;
-      transition: all 0.2s ease-out;
+
+      border: solid 1px var(--white);
+      border-radius: 6px;
+      /* transition: all 0.2s ease-out; */
     }
   }
   .nav__icon-menu {
@@ -75,7 +74,7 @@ const NavMenuStyles = styled.nav`
       background-color: #f0f0ff;
       position: absolute;
       top: 70px;
-      //left: -100%;  //Import
+
       right: -110%;
       width: 100%;
       height: 100vh;
@@ -108,7 +107,7 @@ const NavMenuStyles = styled.nav`
       align-items: center;
       cursor: pointer;
 
-      color: var(--secun-color);
+      color: var(--white);
     }
   }
 `;
@@ -141,7 +140,7 @@ export default function Navbar() {
               className="nav__link"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
             >
-              Inicio
+              Acerca de
             </a>
           </li>
           <li className="nav__item">
@@ -150,10 +149,10 @@ export default function Navbar() {
               className="nav__link"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
             >
-              Proyecto
+              Imagen del día
             </a>
           </li>
-          <li className="nav__item">
+          {/* <li className="nav__item">
             <a
               href="#donacion"
               className="nav__link"
@@ -161,7 +160,7 @@ export default function Navbar() {
             >
               Donaciones
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </NavMenuStyles>

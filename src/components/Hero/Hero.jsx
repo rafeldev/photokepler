@@ -14,6 +14,7 @@ const HeroStyles = styled.section`
   }
   .hero__title {
     font-size: var(--biggest-font-size);
+    text-align: center;
   }
   .hero__description {
     font-size: 1.2rem;
