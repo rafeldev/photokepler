@@ -6,13 +6,32 @@ const HeroStyles = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  .hero__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__title {
+    font-size: var(--biggest-font-size);
+  }
+  .hero__description {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    width: 60%;
+    text-align: center;
+  }
 `;
 
 export function Hero() {
   return (
     <HeroStyles className="hero-main">
       <div className="hero__info">
-        <h1>Tu cumpleaños es algo espacial</h1>
+        <h1 className="hero__title">Tu cumpleaños es algo espacial</h1>
+        <p className="hero__description">
+          Puedes ver que foto se tomó al espacio el día de tu cumpleaños en un
+          bonito formato
+        </p>
         <Button>Comenzar</Button>
       </div>
     </HeroStyles>

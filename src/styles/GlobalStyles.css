@@ -60,6 +60,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: var(--body-font);
+  color: var(--white);
 }
 ul,
 li {
