@@ -22,6 +22,14 @@ const HeroStyles = styled.section`
     width: 60%;
     text-align: center;
   }
+  @media only screen and (max-width: 511px) {
+    .hero__title {
+      font-size: var(--h1-font-size);
+    }
+    .hero__description {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export function Hero() {
