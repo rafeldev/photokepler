@@ -13,6 +13,12 @@ const NavMenuStyles = styled.nav`
   width: 100%;
   height: 70px;
   background-color: transparent;
+  transition: 1s;
+  :hover {
+    background-color: var(--tercer-color);
+    -webkit-box-shadow: 6px 3px 16px -6px #000000;
+    box-shadow: 6px 3px 16px -6px #000000;
+  }
 
   .wrapper {
     width: 100%;
