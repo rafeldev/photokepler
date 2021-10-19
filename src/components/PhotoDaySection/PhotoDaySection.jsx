@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const PhotoDay = styled.section`
-  /* height: auto; */
+  padding: 3rem 0;
   background-color: var(--tercer-color);
   .photoDay-container {
-    padding: 2rem 3rem;
+    /* padding: 2rem 3rem; */
   }
   .photoDay-title {
     margin-bottom: 20px;
@@ -13,13 +13,16 @@ const PhotoDay = styled.section`
   .photoDay-box {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     flex-wrap: wrap;
+    h4 {
+      margin-bottom: 10px;
+    }
   }
   .photoDay__img {
     width: 600px;
     height: 500px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
     margin-bottom: 30px;
 
     img {
@@ -30,7 +33,7 @@ const PhotoDay = styled.section`
     }
   }
   .photoDay__info {
-    width: 500px;
+    width: 600px;
 
     h3 {
       font-size: var(--h1-font-size);
@@ -63,17 +66,17 @@ export function PhotoDaySection() {
   return (
     <PhotoDay>
       <div className="bd-container photoDay-container">
-        <h1 className="photoDay-title">Imagen del día</h1>
+        <h1 className="photoDay-title">Imagen del día:</h1>
         <div className="photoDay-box">
           <picture className="photoDay__img">
             <img src={photoData.url} alt={photoData.title} />
           </picture>
           <article className="photoDay__info">
             <h3>{photoData.title}</h3>
-            <h5>{photoData.date}</h5>
+            <h4>{photoData.date}</h4>
             <p class="card-text">{photoData.explanation}</p>
 
-            <h6>Copyright: {photoData.copyright}</h6>
+            {/* <h6>Copyright: {photoData.copyright}</h6> */}
           </article>
         </div>
       </div>
