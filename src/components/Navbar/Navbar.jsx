@@ -68,12 +68,14 @@ const NavMenuStyles = styled.nav`
     display: none;
   }
   @media screen and (max-width: 960px) {
+    background-color: var(--tercer-color);
+    -webkit-box-shadow: 6px 3px 16px -6px #000000;
+    box-shadow: 6px 3px 16px -6px #000000;
+    height: 60px;
     .nav__menu {
+      background-color: var(--tercer-color);
       position: absolute;
-      top: 80px;
-      background-color: #f0f0ff;
-      position: absolute;
-      top: 70px;
+      top: 60px;
 
       right: -110%;
       width: 100%;
@@ -100,6 +102,10 @@ const NavMenuStyles = styled.nav`
     }
     .nav__link {
       width: 100%;
+      background-color: var(--main-color);
+      border-radius: 0;
+      padding: 0.5rem 1.2rem;
+      margin-top: 30px;
     }
     .nav__icon-menu {
       display: flex;
@@ -134,6 +140,12 @@ export default function Navbar() {
         </div>
 
         <ul className={!showMobileMenu ? "nav__menu " : "nav__menu open__menu"}>
+          {/* <div
+            className="nav__icon-menu iconSize"
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+          >
+            <CgClose />
+          </div> */}
           <li className="nav__item">
             <a
               href="#inicio"
