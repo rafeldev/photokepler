@@ -5,7 +5,8 @@ import footerLogo from "../../assets/image/logoFooter.svg";
 
 const FooterStyles = styled.footer`
   width: 100%;
-  background-color: var(--secun-color); /* border-top: 1px solid #979797; */
+  background-color: var(--secun-color);
+  border-top: 1px solid rgba(119, 136, 180, 0.15);
   .footer__container {
     padding-top: 50px;
 
