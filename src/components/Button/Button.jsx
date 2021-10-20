@@ -4,7 +4,9 @@ import styled from "styled-components";
 const ButtonStyle = styled.div`
   margin-top: 2rem;
   .button {
-    /* font-size: 2.2rem; */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     background-color: ${(props) =>
       props.outline ? "var(--secun-color)" : "var(--main-color)"};
     padding: 0.4em 1.3em;
