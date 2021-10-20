@@ -1,66 +1,14 @@
-import styled from "styled-components";
+import { InfoNasaStyles } from "./InfoNasaStyles";
 import imgHublle from "../../assets/image/telescopio-hubble.png";
 import { Button } from "../Button/Button";
 import { ImArrowRight2 } from "react-icons/im";
-const PhotoDay = styled.section`
-  padding: 3rem 0;
-  background-color: var(--secun-color);
-  .photoDay-container {
-    /* padding: 2rem 3rem; */
-  }
-  .photoDay-title {
-    margin-bottom: 20px;
-  }
-  .photoDay-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    h4 {
-      margin-bottom: 10px;
-    }
-  }
-  .photoDay__img {
-    width: 330px;
-    height: 272px;
-    margin-right: 50px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-  }
-  .photoDay__info {
-    width: 600px;
-    margin-bottom: 30px;
-
-    h3 {
-      font-size: var(--h1-font-size);
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 10px;
-    }
-  }
-  .btn-infoNasa {
-    display: flex;
-
-    path {
-      margin-top: 10px;
-      align-self: center;
-      height: 100%;
-    }
-  }
-`;
 
 export function InfoNasaSection() {
   return (
-    <PhotoDay>
-      <div className="bd-container photoDay-container">
-        <div className="photoDay-box">
-          <article className="photoDay__info">
+    <InfoNasaStyles>
+      <div className="bd-container infoNasa-container">
+        <div className="infoNasa-box">
+          <article className="infoNasa__info">
             <h3>Acerca de las imagenes espaciales </h3>
 
             <p>
@@ -78,11 +26,11 @@ export function InfoNasaSection() {
 
             {/* <h6>Copyright: {photoData.copyright}</h6> */}
           </article>
-          <picture className="photoDay__img">
+          <picture className="infoNasa__img">
             <img src={imgHublle} alt="Telescopio Hubble" />
           </picture>
         </div>
       </div>
-    </PhotoDay>
+    </InfoNasaStyles>
   );
 }
