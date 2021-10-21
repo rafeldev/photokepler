@@ -1,0 +1,1 @@
+export const GET_PHOTO_OF_DAY = 'GET_PHOTO_OF_DAY'
