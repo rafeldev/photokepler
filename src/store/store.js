@@ -14,5 +14,4 @@ export const store = createStore(
     appRedcuers,
     initialState,
     composeEnhancers(applyMiddleware(...middleware))
-  );
-  store.subscribe(store.getState())
+);
