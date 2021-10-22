@@ -20,6 +20,8 @@ export const InfoNasaStyles = styled.section`
     height: 272px;
     margin-right: 50px;
 
+    justify-self: center;
+    align-self: center;
     img {
       width: 100%;
       height: 100%;

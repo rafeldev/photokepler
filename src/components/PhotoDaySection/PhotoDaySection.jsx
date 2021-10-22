@@ -22,7 +22,7 @@ export function PhotoDaySection() {
   return (
     <PhotoDayStyles>
       <div className="bd-container photoDay-container">
-        <h1 className="photoDay-title">Imagen del día:</h1>
+        <h1 className="photoDay-title">Fotografía del día:</h1>
         <div className="photoDay-box">
           <picture className="photoDay__img">
             <img src={photoData.url} alt={photoData.title} />
