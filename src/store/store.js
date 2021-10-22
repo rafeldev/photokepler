@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import appRedcuers from '../reducers'
 
 export const emptyState = {
-    dataUser: {}
+    photoOfDay: {}
 }
 
 const initialState = emptyState

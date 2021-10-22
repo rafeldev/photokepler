@@ -1,26 +1,19 @@
 //Actions types
+import { GET_PHOTO_OF_DAY } from '../constants/actionsTypes'
 
 //Initial state
 const initialState = {
-    data: []
+  photoOfDay: {}
 }
 
 //Funcion switch
 export const photoOfDayReducer = (state = initialState, action) => {
-    const { type, payload } = action
-    switch (type) {
-      case ' GET_PLANTAS': {
-        return { ...state, ...payload }
-      }
-  
-      case ' SET_CURRENT_DATA': {
-        return { ...state, currentData: payload }
-      }
-      
-      case 'RESET_PLANTAS': {
-        return { ...initialState }
-      }
-      default:
-        return state
+  const { type, payload } = action
+  switch (type) {
+    case GET_PHOTO_OF_DAY: {
+      return { ...state, ...payload }
     }
+    default:
+      return state
   }
+}
