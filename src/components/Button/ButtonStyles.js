@@ -19,6 +19,7 @@ export const ButtonStyle = styled.div`
         : "2px solid var(--main-color)"};
     color: ${(props) => (props.outline ? "var(--main-color)" : "var(--white)")};
     transition: 1s;
+    cursor: pointer;
     :hover {
       background-color: ${(props) =>
         props.outline ? "var(--input-color)" : "var(--input-color)"};
