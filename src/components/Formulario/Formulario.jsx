@@ -1,23 +1,37 @@
+import { useState } from "react";
 import { FormularioStyles } from "./FormularioStyles";
+import { months, numberDays } from "./FormularioData";
 
 export function Formulario() {
+  const [name, setName] = useState("");
+  const [month, setMonth] = useState("");
+  const [day, setDay] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setName(e.target.value);
+  };
+
+  function handleChangeMonth(event) {
+    console.log(`Seleccionaste ${event.target.value}`);
+    setMonth(event.target.value);
+  }
+  function handleChangeDay(event) {
+    console.log(`Seleccionaste ${event.target.value}`);
+    setDay(event.target.value);
+  }
   return (
     <FormularioStyles>
       <section className="  fomulario-container">
         <div className="formulario__info">
           <div className="formulario__info-text">
             <h2 className="formulario__title">Bienvenido a PhotoKepler</h2>
-            {/* <p>
+            <p>
               PhotoKepler te sirve para ver que foto se tomó al espacio el día
               de tu cumpleaños, para verlas en un formato divertido y que puedes
               compartir con amigos.
-            </p> */}
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-              voluptatem voluptatibus? Ad sequi, corporis quaerat ipsum at.
-              Consequuntur placeat autem excepturi commodi fuga quas adipisci
-              dolorum rerum.
             </p>
+
             <ul>
               <li>Tu información NO se guarda ni se comparte</li>
               <li>Es una web segura</li>
@@ -31,29 +45,44 @@ export function Formulario() {
         <form action="" className="formulario__form">
           <div className="formulario__form-grup">
             <label htmlFor="">Nombre</label>
-            <input type="text" placeholder="Introduce tu nombre o apodo aquí" />
+            <input
+              type="text"
+              placeholder="Introduce tu nombre o apodo aquí"
+              value={name}
+              onChange={handleSubmit}
+              required
+            />
           </div>
           <div className="formulario__form-grup">
             <label htmlFor="">Selecciona tu fecha de cumpleaños</label>
-            {/* <input type="month" name="mesnacimiento"></input> */}
+
+            {/* ============================ select ============================================================= */}
+
             <div className="formulario__selects">
-              <select name="" id="">
-                <option value="">Enero</option>
-                <option value="">Febrero</option>
-                <option value="">Marzo</option>
-                <option value="">Abril</option>
-                <option value="">Mayo</option>
-                <option value="">Junio</option>
-                <option value="">Julio</option>
-                <option value="">Agosto</option>
-                <option value="">Septiembre</option>
-                <option value="">Octubre</option>
-                <option value="">Noviembre</option>
-                <option value="">Diciembre</option>
+              <select
+                name="month"
+                id="month"
+                value={month}
+                onChange={handleChangeMonth}
+              >
+                {months.map((month) => (
+                  <option key={month.value} value={month.value}>
+                    {month.name}
+                  </option>
+                ))}
               </select>
-              <select name="" id="">
-                <option value="">1</option>
-                <option value="">1</option>
+              <select
+                name="day"
+                id="day"
+                value={day}
+                onChange={handleChangeDay}
+                required
+              >
+                {numberDays.map((day) => (
+                  <option key={day.value} value={day.value}>
+                    {day.value}
+                  </option>
+                ))}
               </select>
             </div>
             <button type="submit">Confirmar</button>
