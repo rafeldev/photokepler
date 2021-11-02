@@ -1,1 +1,2 @@
 export const GET_PHOTO_OF_DAY = 'GET_PHOTO_OF_DAY'
+export const GET_PHOTO_BY_DATE = 'GET_PHOTO_BY_DATE'
