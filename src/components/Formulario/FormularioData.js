@@ -19,10 +19,7 @@ export const months = [
     value: "junio",
     name: "Junio",
   },
-  {
-    value: "junio",
-    name: "Julio",
-  },
+
   {
     value: "julio",
     name: "Julio",

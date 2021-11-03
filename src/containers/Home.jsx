@@ -4,6 +4,7 @@ import { Hero } from "../components/Hero/Hero";
 import { PhotoDaySection } from "../components/PhotoDaySection/PhotoDaySection";
 import { InfoNasaSection } from "../components/InfoNasaSection/InfoNasaSection";
 import { Formulario } from "../components/Formulario/Formulario";
+import { Downloadpage } from "./Downloadpage/Downloadpage";
 
 //Services
 import { getPhotoOfDay } from "../services";
@@ -20,10 +21,11 @@ export function Home() {
 
   return (
     <>
-      {/* <Hero />
+      <Hero />
       <PhotoDaySection photoOfDay={photoOfDay} />
-      <InfoNasaSection /> */}
-      <Formulario />
+      <InfoNasaSection />
+      {/* <Formulario /> */}
+      {/* <Downloadpage photoOfDay={photoOfDay} /> */}
     </>
   );
 }
