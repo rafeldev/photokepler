@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FormularioStyles } from "./FormularioStyles";
 import { months, numberDays } from "./FormularioData";
+import { Link } from "react-router-dom";
 
 export function Formulario() {
   const [name, setName] = useState("");
@@ -85,7 +86,9 @@ export function Formulario() {
                 ))}
               </select>
             </div>
-            <button type="submit">Confirmar</button>
+            <Link to="/formulario/downloadpage">
+              <button type="submit">Confirmar</button>
+            </Link>
           </div>
         </form>
       </section>

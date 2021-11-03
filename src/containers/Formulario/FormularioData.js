@@ -1,54 +1,60 @@
 export const months = [
   {
-    value: "enero",
+    value: "01",
     name: "Enero",
   },
   {
-    value: "febrero",
+    value: "02",
     name: "Febrero",
   },
   {
-    value: "abril",
+    value: "03",
     name: "Abril",
   },
   {
-    value: "mayo",
+    value: "04",
     name: "Mayo",
   },
   {
-    value: "junio",
+    value: "05",
     name: "Junio",
   },
 
   {
-    value: "julio",
+    value: "06",
     name: "Julio",
   },
   {
-    value: "agosto",
+    value: "07",
     name: "Agosto",
   },
   {
-    value: "septiembre",
+    value: "09",
     name: "Septiembre",
   },
   {
-    value: "octubre",
+    value: "10",
     name: "Octubre",
   },
   {
-    value: "noviembre",
+    value: "11",
     name: "Noviembre",
   },
   {
-    value: "diciembre",
+    value: "12",
     name: "Diciembre",
   },
 ];
 
 export const numberDays = [];
 
+// contador del 1 al 31 para hacer push al arreglode numberDay:
+
 for (let i = 1; i < 32; i++) {
-  numberDays.push({ value: `${[i]}` });
+  if ([i] < 10) {
+    numberDays.push({ value: `${0}${[i]}` });
+  } else {
+    numberDays.push({ value: `${[i]}` });
+  }
 }
 console.log(numberDays);

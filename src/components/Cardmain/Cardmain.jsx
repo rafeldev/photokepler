@@ -1,10 +1,26 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { CardmainStyles } from "./CardmainStyles";
-export function Cardmain({ photoOfDay }) {
-  if (!photoOfDay) return <div />;
+
+//Services
+import { getPhotoByDate } from "../../services";
+
+export function Cardmain() {
+  const dispatch = useDispatch();
+
+  const photoByDate = useSelector((state) => state.photoByDate);
+
+  const date = "2010-12-11";
+
+  useEffect(() => {
+    dispatch(getPhotoByDate(date));
+  }, [dispatch]);
+
+  if (!photoByDate) return <div />;
   return (
     <CardmainStyles>
       <picture className="cardmain-img">
-        <img src={photoOfDay.url} alt={photoOfDay.title} />
+        <img src={photoByDate.url} alt={photoByDate.title} />
       </picture>
       <section>
         <h3>Miguel Ruz!</h3>

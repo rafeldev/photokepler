@@ -1,4 +1,5 @@
 import { HeroStyles } from "./HeroStyles";
+import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 import "./Hero.css";
 
@@ -11,7 +12,9 @@ export function Hero() {
           Puedes ver que foto se tomó al espacio el día de tu cumpleaños en un
           bonito formato
         </p>
-        <Button>Comenzar</Button>
+        <Link to="/formulario">
+          <Button>Comenzar</Button>
+        </Link>
       </div>
     </HeroStyles>
   );
