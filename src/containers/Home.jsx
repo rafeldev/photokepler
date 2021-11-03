@@ -15,8 +15,8 @@ export function Home() {
   const photoByDate = useSelector((state) => state.photoByDate);
 
   // console.log(photoOfDay,'AQUIIIIIII')
-  const date = '2021-01-06'
-  
+  const date = "2021-01-06";
+
   useEffect(() => {
     dispatch(getPhotoOfDay());
     dispatch(getPhotoByDate(date));
@@ -28,10 +28,7 @@ export function Home() {
       <PhotoDaySection photoOfDay={photoOfDay} />
       <InfoNasaSection />
       {/* <Formulario /> */}
-<<<<<<< HEAD
       {/* <Downloadpage photoOfDay={photoOfDay} /> */}
-=======
->>>>>>> 5b6bc702e57c5b85462c15f15fc607022a05b44b
     </>
   );
 }
