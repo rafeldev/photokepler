@@ -8,15 +8,3 @@
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 1260px) {
-  .about__cardNasa {
-    flex-direction: column-reverse;
-  }
-  .about__cardNasa-info {
-    margin-right: 0;
-    text-align: center;
-  }
-  .about__cardNasa-img {
-    margin-bottom: 2rem;
-  }
-}

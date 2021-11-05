@@ -3,13 +3,16 @@ import "./About.css";
 import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import imgNasaApis from "../../assets/image/logoNasaApis.png";
+import { CardCreators } from "../../components/CardCreators/CardCreators";
 
 export function About() {
   return (
     <AboutStyles>
       <section className="about__main">
         <div className="about__main-info">
-          <h2>Imagenes geniales que puedes compartir con amigos</h2>
+          <h2 className="about__info-title">
+            Imagenes geniales que puedes compartir con amigos
+          </h2>
           <p>
             El espacio es enorme, tan grande como nuestro amor por la astronomia
             y la exploración espacial ¿Que mejor día para verlo que en tu
@@ -45,6 +48,11 @@ export function About() {
         <div className="about__frase-box">
           <p>"En algún sitio algo increíble espera ser descubierto"</p>
           <em>Carl Sagan</em>
+        </div>
+      </section>
+      <section className="about__creators">
+        <div className="about__creators-box">
+          <CardCreators />
         </div>
       </section>
     </AboutStyles>

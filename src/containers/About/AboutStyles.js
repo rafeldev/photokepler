@@ -8,13 +8,15 @@ export const AboutStyles = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h2 {
-      font-size: var(--biggest-font-size);
-    }
+
     p {
-      width: 50%;
+      width: 60%;
       line-height: 30px;
+      margin-bottom: 1rem;
     }
+  }
+  .about__info-title {
+    font-size: var(--biggest-font-size);
   }
   .about__infoNasa {
     padding: 10rem 2rem;
@@ -50,6 +52,8 @@ export const AboutStyles = styled.div`
     display: flex;
     justify-content: center;
     img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
@@ -68,6 +72,15 @@ export const AboutStyles = styled.div`
       line-height: 3rem;
     }
   }
+  .about__creators {
+    background-color: var(--secun-color);
+    /* height: 500px; */
+    padding: 13rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   @media screen and (max-width: 1260px) {
     .about__cardNasa {
       flex-direction: column-reverse;
@@ -78,6 +91,16 @@ export const AboutStyles = styled.div`
     }
     .about__cardNasa-img {
       margin-bottom: 2rem;
+    }
+  }
+  @media only screen and (max-width: 511px) {
+    .about__info-title {
+      font-size: var(--h1-font-size);
+    }
+    .about__cardNasa-info {
+      h3 {
+        font-size: var(--h2-font-size);
+      }
     }
   }
 `;

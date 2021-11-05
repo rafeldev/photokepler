@@ -17,7 +17,9 @@ export default function Navbar() {
     <NavbarStyles>
       <div className="wrapper bd-container">
         <div data-aos="fade" className="nav__logo">
-          <img src={logoNav} alt="" />
+          <Link to="/">
+            <img src={logoNav} alt="" />
+          </Link>
         </div>
 
         <div

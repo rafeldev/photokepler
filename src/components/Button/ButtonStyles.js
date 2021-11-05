@@ -4,7 +4,7 @@ import styled from "styled-components";
 // reliaza con un condicional ternario:
 
 export const ButtonStyle = styled.div`
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   .button {
     display: inline-flex;
     align-items: center;
