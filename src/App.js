@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { Home } from "./containers/Home";
 import { Formulario } from "./containers/Formulario/Formulario";
 import { Downloadpage } from "./containers/Downloadpage/Downloadpage";
+import { About } from "./containers/About/About";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path="/formulario">
             <Formulario />
+          </Route>
+          <Route path="/acercade">
+            <About />
           </Route>
           <Route path="/">
             <Home />

@@ -1,0 +1,22 @@
+.about__main {
+  background-image: url(../../assets/image/BG\ section\ acerca\ de.png);
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1260px) {
+  .about__cardNasa {
+    flex-direction: column-reverse;
+  }
+  .about__cardNasa-info {
+    margin-right: 0;
+    text-align: center;
+  }
+  .about__cardNasa-img {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import Aos from "aos";
 // import "aos/dist/aos.css";
 import { NavbarStyles } from "./NavbarStyles";
@@ -34,13 +35,13 @@ export default function Navbar() {
             <CgClose />
           </div> */}
           <li className="nav__item">
-            <a
-              href="#inicio"
+            <Link
+              to="/acercade"
               className="nav__link"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
             >
               Acerca de
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
             <a

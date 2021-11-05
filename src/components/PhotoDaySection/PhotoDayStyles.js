@@ -13,16 +13,16 @@ export const PhotoDayStyles = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+
     h4 {
       margin-bottom: 10px;
     }
   }
   .photoDay__img {
     width: 600px;
-    /* flex-basis: 600px; */
+
     height: 500px;
-    /* margin-right: 50px; */
+
     margin-bottom: 30px;
 
     img {
