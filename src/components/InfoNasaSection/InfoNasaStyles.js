@@ -38,7 +38,7 @@ export const InfoNasaStyles = styled.section`
       margin-bottom: 20px;
     }
     p {
-      margin-bottom: 10px;
+      margin-bottom: 2rem;
     }
   }
   .btn-infoNasa {

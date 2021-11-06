@@ -12,7 +12,7 @@ export function Hero() {
           Puedes ver que foto se tomó al espacio el día de tu cumpleaños en un
           bonito formato
         </p>
-        <Link to="/formulario">
+        <Link to="/formulario" className="hero__button">
           <Button>Comenzar</Button>
         </Link>
       </div>
