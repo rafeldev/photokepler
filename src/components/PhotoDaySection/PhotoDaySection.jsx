@@ -1,11 +1,10 @@
 import { PhotoDayStyles } from "./PhotoDayStyles";
 
 export function PhotoDaySection({ photoOfDay }) {
-  
   if (!photoOfDay) return <div />;
 
   return (
-    <PhotoDayStyles>
+    <PhotoDayStyles id="photoDay">
       <div className="bd-container photoDay-container">
         <h1 className="photoDay-title">Fotografía del día:</h1>
         <div className="photoDay-box">

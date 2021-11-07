@@ -38,6 +38,15 @@ export default function Navbar() {
           </div> */}
           <li className="nav__item">
             <Link
+              to="/"
+              className="nav__link"
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+            >
+              Inicio
+            </Link>
+          </li>
+          <li className="nav__item">
+            <Link
               to="/acercade"
               className="nav__link"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -46,13 +55,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="nav__item">
-            <a
-              href="#proyect"
+            <Link
+              to="/#photoDay"
               className="nav__link"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
             >
               Imagen del día
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,9 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CardmainStyles } from "./CardmainStyles";
+import html2canvas from "html2canvas";
+
 //Services
 import { getPhotoByDate } from "../../services";
 import { Button } from "../Button/Button";
+
+import styled from "styled-components";
 
 export function Cardmain() {
   const dispatch = useDispatch();
@@ -18,12 +22,31 @@ export function Cardmain() {
 
   if (!photoByDate) return <div />;
 
+  const onClickExportar = function (evento) {
+    html2canvas(document.querySelector(".cardmain-container"), {
+      logging: true,
+      letterRendering: 1,
+      allowTaint: true,
+      useCORS: true,
+    }).then((canvas) => {
+      let img = canvas.toDataURL("image/png");
+      let link = document.createElement("a");
+      link.download = `mifoto.jpg`;
+      link.href = img;
+      link.click();
+    });
+  };
+
+  const ImgCard = styled.picture`
+    background-image: url(${photoByDate.url});
+  `;
+
   return (
     <CardmainStyles>
-      <div className="cardmain-container" id="cardmain">
-        <picture className="cardmain-img">
-          <img id="img" src={photoByDate.url} alt={photoByDate.title} />
-        </picture>
+      <div className="cardmain-container" id="photo">
+        <ImgCard className="cardmain-img">
+          {/* <img id="img" src={photoByDate.url} alt={photoByDate.title} /> */}
+        </ImgCard>
         <section>
           <h3 className="cardmain__name">Miguel Ruz!</h3>
           <p>Esta foto se tomó en espacio el día de tu cumple</p>
@@ -34,11 +57,11 @@ export function Cardmain() {
           </p>
         </section>
       </div>
-
+      <button onClick={onClickExportar}>Descragar</button>
       {/* <button>Descargar</button> */}
-      <div className="card__download-bts">
+      {/* <div className="card__download-bts">
         <Button>Descargar</Button>
-      </div>
+      </div> */}
     </CardmainStyles>
   );
 }

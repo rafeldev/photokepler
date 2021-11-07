@@ -79,9 +79,10 @@ export const NavbarStyles = styled.nav`
     .nav__menu {
       background-color: var(--tercer-color);
       position: absolute;
-      top: 60px;
+      top: -79rem;
 
-      right: -110%;
+      left: 0;
+      /* right: -110%; */
       width: 100%;
       height: 100vh;
       flex-direction: column;
@@ -93,20 +94,22 @@ export const NavbarStyles = styled.nav`
       width: 150px;
     }
     .nav__menu.open__menu {
-      width: 50%;
-      right: 0;
+      width: 100%;
+      top: 60px;
+      /* right: 0; */
+      bottom: 0;
       margin: 0;
     }
     .nav__item {
       width: 100%;
       height: 70px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
     }
     .nav__link {
-      width: 100%;
-      background-color: var(--main-color);
+      /* width: 100%; */
+      /* background-color: var(--main-color); */
       border-radius: 0;
       padding: 0.5rem 1.2rem;
       margin-top: 30px;
