@@ -11,9 +11,9 @@ export const NavbarStyles = styled.nav`
 
     transition: 0.5s;
     :hover {
-      /* background-color: var(--tercer-color); */
-      /* -webkit-box-shadow: 6px 3px 16px -6px #000000;
-      box-shadow: 6px 3px 16px -6px #000000; */
+      background-color: var(--tercer-color);
+      -webkit-box-shadow: 6px 3px 16px -6px #000000;
+      box-shadow: 6px 3px 16px -6px #000000;
     }
   }
 

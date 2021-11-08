@@ -39,6 +39,7 @@ export function Cardmain() {
 
   const ImgCard = styled.picture`
     background-image: url(${photoByDate.url});
+    background-size: cover;
   `;
 
   return (

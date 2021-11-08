@@ -5,14 +5,14 @@ import migue from "../../assets/image/fotoCreators/migue.jpg";
 export const creatorData = [
   {
     name: "Pedro Moreno",
-    rol: "Frontend",
+    rol: "Frontend Developer",
     img: pedroimg,
     network: "Twitter",
     link: "https://twitter.com/pdromoreno7/",
   },
   {
     name: "Rafael Alvarez",
-    rol: "Frontend",
+    rol: "Frontend Developer",
     img: rafaimg,
     network: "Twitter",
     link: "https://twitter.com/pdromoreno7/",

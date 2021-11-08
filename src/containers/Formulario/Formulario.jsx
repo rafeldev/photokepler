@@ -26,10 +26,10 @@ export function Formulario() {
       <section className="  fomulario-container">
         <div className="formulario__info">
           <div className="formulario__info-text">
-            <h2 className="formulario__title">Bienvenido a PhotoKepler</h2>
+            <h2 className="formulario__title">Bienvenido a Skycomeet</h2>
             <p>
-              PhotoKepler te sirve para ver que foto se tomó al espacio el día
-              de tu cumpleaños, para verlas en un formato divertido y que puedes
+              Skycomeet te sirve para ver que foto se tomó al espacio el día de
+              tu cumpleaños, para verlas en un formato divertido y que puedes
               compartir con amigos.
             </p>
 
