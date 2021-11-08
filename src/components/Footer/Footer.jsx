@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { FooterStyles } from "./FooterStyles";
+import { Link } from "react-router-dom";
 import footerLogo from "../../assets/image/logoFooter.svg";
 
 export function Footer() {
@@ -14,10 +15,10 @@ export function Footer() {
           <p className="footer__nav-title">Funciones</p>
           <ul>
             <li>
-              <a href="#"> Inicio</a>
+              <Link to="/"> Inicio</Link>
             </li>
             <li>
-              <a href="#">Acerca de</a>
+              <Link to="/acercade">Acerca de</Link>
             </li>
           </ul>
         </div>

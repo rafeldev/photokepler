@@ -20,7 +20,11 @@ export function InfoNasaSection() {
               contamos con Herramientas que facilitan esto, cómo el telescopio
               Hubble.
             </p>
-            <Button className="btn-infoNasa" outline>
+            <Button
+              btnLink="https://www.nasa.gov/"
+              className="btn-infoNasa"
+              outline
+            >
               Visitar la web de la nasa <ImArrowRight2 className="arrow-nasa" />
             </Button>
 
