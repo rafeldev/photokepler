@@ -5,12 +5,14 @@ import { Home } from "./containers/Home";
 import { Formulario } from "./containers/Formulario/Formulario";
 import { Downloadpage } from "./containers/Downloadpage/Downloadpage";
 import { About } from "./containers/About/About";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Navbar />
+        <ScrollToTop />
         <Switch>
           <Route path="/formulario/downloadpage">
             <Downloadpage />
