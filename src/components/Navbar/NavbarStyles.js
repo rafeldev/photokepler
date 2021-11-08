@@ -1,23 +1,27 @@
 import styled from "styled-components";
 export const NavbarStyles = styled.nav`
-  position: fixed;
-  z-index: var(--z-fixed);
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 70px;
-  /* background-color: transparent; */
-  background-color: var(--tercer-color);
-  -webkit-box-shadow: 6px 3px 16px -6px #000000;
-  box-shadow: 6px 3px 16px -6px #000000;
+  .navbar {
+    position: fixed;
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
 
-  transition: 1s;
-  :hover {
-    /* background-color: var(--tercer-color); */
+    transition: 0.5s;
+    :hover {
+      /* background-color: var(--tercer-color); */
+      /* -webkit-box-shadow: 6px 3px 16px -6px #000000;
+      box-shadow: 6px 3px 16px -6px #000000; */
+    }
+  }
+
+  .active {
+    background-color: var(--tercer-color);
     -webkit-box-shadow: 6px 3px 16px -6px #000000;
     box-shadow: 6px 3px 16px -6px #000000;
   }
-
   .wrapper {
     width: 100%;
     height: 100%;
@@ -72,10 +76,6 @@ export const NavbarStyles = styled.nav`
     display: none;
   }
   @media screen and (max-width: 960px) {
-    background-color: var(--tercer-color);
-    -webkit-box-shadow: 6px 3px 16px -6px #000000;
-    box-shadow: 6px 3px 16px -6px #000000;
-    height: 60px;
     .nav__menu {
       background-color: var(--tercer-color);
       position: absolute;
