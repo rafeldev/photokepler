@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const AboutStyles = styled.div`
+  .about__relleno {
+    height: 2.5rem;
+    background-color: #0b0e3a;
+  }
   .about__main-info {
     max-width: 800px;
     text-align: center;

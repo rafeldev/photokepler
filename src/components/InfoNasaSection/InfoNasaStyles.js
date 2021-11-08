@@ -7,6 +7,7 @@ export const InfoNasaStyles = styled.section`
   }
 
   .infoNasa-box {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +17,7 @@ export const InfoNasaStyles = styled.section`
     }
   }
   .infoNasa__img {
-    width: 330px;
+    max-width: 330px;
     height: 272px;
     margin-right: 50px;
 
@@ -26,11 +27,10 @@ export const InfoNasaStyles = styled.section`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 8px;
     }
   }
   .infoNasa__info {
-    width: 600px;
+    max-width: 600px;
     margin-bottom: 30px;
 
     h3 {
@@ -48,6 +48,30 @@ export const InfoNasaStyles = styled.section`
       margin-top: 10px;
       align-self: center;
       height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1260px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .infoNasa-box {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+    /* .infoNasa__info {
+      width: 100%;
+    } */
+    .infoNasa__img {
+      height: auto;
+
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 `;

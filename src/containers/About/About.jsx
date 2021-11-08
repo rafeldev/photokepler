@@ -8,6 +8,7 @@ import { CardCreators } from "../../components/CardCreators/CardCreators";
 export function About() {
   return (
     <AboutStyles>
+      <div className="about__relleno"> </div>
       <section className="about__main">
         <div className="about__main-info">
           <h2 className="about__info-title">

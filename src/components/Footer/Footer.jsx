@@ -22,6 +22,9 @@ export function Footer() {
           </ul>
         </div>
       </div>
+      <div className="footer__copy">
+        <p>&#169; 2021 shycomeet. Todos los derechos reservados</p>
+      </div>
     </FooterStyles>
   );
 }
