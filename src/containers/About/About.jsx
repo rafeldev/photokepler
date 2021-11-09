@@ -4,13 +4,21 @@ import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import imgNasaApis from "../../assets/image/logoNasaApis.png";
 import { CardCreators } from "../../components/CardCreators/CardCreators";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export function About() {
+  // Animacion Aos settting:
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <AboutStyles>
       <div className="about__relleno"> </div>
       <section className="about__main">
-        <div className="about__main-info">
+        <div className="about__main-info" data-aos="fade">
           <h2 className="about__info-title">
             Imagenes geniales que puedes compartir con amigos
           </h2>
@@ -25,7 +33,7 @@ export function About() {
         </div>
       </section>
       <section className="about__infoNasa">
-        <div className="about__cardNasa">
+        <div className="about__cardNasa" data-aos="fade-up">
           <div className="about__cardNasa-info">
             <h3>¿Como fue posible esta web?</h3>
             <p>
@@ -52,7 +60,7 @@ export function About() {
         </div>
       </section>
       <section className="about__creators">
-        <div className="about__creators-box">
+        <div className="about__creators-box" data-aos="fade">
           <CardCreators />
         </div>
       </section>

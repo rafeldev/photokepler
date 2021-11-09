@@ -2,11 +2,18 @@ import { InfoNasaStyles } from "./InfoNasaStyles";
 import imgHublle from "../../assets/image/telescopio-hubble.png";
 import { Button } from "../Button/Button";
 import { ImArrowRight2 } from "react-icons/im";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export function InfoNasaSection() {
+  // Animacion Aos settting:
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <InfoNasaStyles>
-      <div className="bd-container infoNasa-container">
+      <div className="bd-container infoNasa-container" data-aos="fade-up">
         <div className="infoNasa-box">
           <article className="infoNasa__info">
             <h3>Acerca de las imagenes espaciales </h3>

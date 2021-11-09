@@ -1,11 +1,18 @@
 import { PhotoDayStyles } from "./PhotoDayStyles";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export function PhotoDaySection({ photoOfDay }) {
+  // Animacion Aos settting:
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   if (!photoOfDay) return <div />;
 
   return (
     <PhotoDayStyles id="photoDay">
-      <div className="bd-container photoDay-container">
+      <div className="bd-container photoDay-container" data-aos="fade-up">
         <h1 className="photoDay-title">Fotografía del día:</h1>
         <div className="photoDay-box">
           <picture className="photoDay__img">
