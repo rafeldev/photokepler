@@ -27,14 +27,6 @@ export function Formulario({ setDatos, datos }) {
   }
 
   const isLoading = useSelector(state => state.loading)
-  const photoByDate = useSelector((state) => state.photoByDate);
-
-
-  const redirecToCard = () => {
-    if(photoByDate.url){
-      history.push('/downloadpage')
-    }
-  }
 
 
   // function handleChangeName(event) {

@@ -6,8 +6,6 @@ import { Home } from "./containers/Home";
 import { Formulario } from "./containers/Formulario/Formulario";
 import { Downloadpage } from "./containers/Downloadpage/Downloadpage";
 import { About } from "./containers/About/About";
-import { useSelector } from "react-redux";
-import { Redirect } from 'react-router'
 
 function App() {
   //Me toco mover la logica del state aca, porque es mas facil moverlo a los hijos ya que son dos componentes diferentes que ocupan la misma data
@@ -21,8 +19,6 @@ function App() {
   // const [name, setName] = useState("");
   // const [month, setMonth] = useState("");
   // const [day, setDay] = useState("");
-
-  const photoByDate = useSelector((state) => state.photoByDate);
 
   return (
     <>
