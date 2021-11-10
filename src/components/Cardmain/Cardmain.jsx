@@ -1,24 +1,15 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { CardmainStyles } from "./CardmainStyles";
 import html2canvas from "html2canvas";
 
 //Services
-import { getPhotoByDate } from "../../services";
 import { Button } from "../Button/Button";
 
 import styled from "styled-components";
 
-export function Cardmain() {
-  const dispatch = useDispatch();
-
+export function Cardmain({datos}) {
   const photoByDate = useSelector((state) => state.photoByDate);
-
-  const date = "2018-12-11";
-
-  useEffect(() => {
-    dispatch(getPhotoByDate(date));
-  }, [dispatch]);
+  const { name } = datos
 
   if (!photoByDate) return <div />;
 
@@ -45,12 +36,12 @@ export function Cardmain() {
     <CardmainStyles>
       <div className="cardmain-container" id="photo">
         <ImgCard className="cardmain-img">
-          {/* <img id="img" src={photoByDate.url} alt={photoByDate.title} /> */}
+          <img id="img" src={photoByDate.url} alt={photoByDate.title} />
         </ImgCard>
         <section>
-          <h3 className="cardmain__name">Miguel Ruz!</h3>
+          <h3 className="cardmain__name">{name}!</h3>
           <p>Esta foto se tomó en espacio el día de tu cumple</p>
-          <em>“ 11-Diciembre ”</em>
+          <em>{photoByDate.date}</em>
           <p className="cardmain__description">
             La galaxia Andromeda es una galaxia espiral con un diámetro de
             doscientos veinte mil años luz.

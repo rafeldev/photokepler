@@ -3,6 +3,7 @@ import axios from 'axios'
 //Actions
 import { photoByDateActions } from '../actions/photoByDateActions';
 import { photoOfDayActions } from '../actions/photoOfDayActions';
+import { setLoading } from '../actions/loadingActions';
 
 
 //Constants
@@ -29,6 +30,7 @@ export const getPhotoOfDay = () => {
 
 export const getPhotoByDate = (date) => {
     return (dispatch) => {
+        dispatch(setLoading(true));
         axios.get(`${URL_API}=${API_KEY}&date=${date}`)
             .then(function (response) {
                 const { data } = response;
@@ -39,6 +41,7 @@ export const getPhotoByDate = (date) => {
             })
             .finally(function () {
                 //always executed
+                dispatch(setLoading(false));
             })
     }
 }
