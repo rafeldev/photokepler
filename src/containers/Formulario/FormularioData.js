@@ -9,23 +9,27 @@ export const months = [
   },
   {
     value: "03",
-    name: "Abril",
+    name: "Marzo",
   },
   {
     value: "04",
-    name: "Mayo",
+    name: "Abril",
   },
   {
     value: "05",
+    name: "Mayo",
+  },
+  {
+    value: "06",
     name: "Junio",
   },
 
   {
-    value: "06",
+    value: "07",
     name: "Julio",
   },
   {
-    value: "07",
+    value: "08",
     name: "Agosto",
   },
   {
