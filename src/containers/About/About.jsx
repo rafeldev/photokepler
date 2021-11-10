@@ -11,7 +11,7 @@ import { useEffect } from "react";
 export function About() {
   // Animacion Aos settting:
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 3000 });
   }, []);
 
   return (

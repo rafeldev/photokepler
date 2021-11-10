@@ -3,10 +3,14 @@ import { FormularioStyles } from "./FormularioStyles";
 import { months, numberDays } from "./FormularioData";
 import { Link } from "react-router-dom";
 
+import { Alertcard } from "../../components/Alertcard/Alertcard";
+import { useEffect } from "react";
+
 export function Formulario() {
   const [name, setName] = useState("");
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
+  const [aviso, setAviso] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,9 +25,26 @@ export function Formulario() {
     console.log(`Seleccionaste ${event.target.value}`);
     setDay(event.target.value);
   }
+
+  const closeAlert = (e) => {
+    setAviso(false);
+  };
+
+  function Aviso() {
+    if (aviso) {
+      return (
+        <Alertcard close={closeAlert}>
+          Hey! la información que introduces solo es para encontrar la foto, no
+          se guarda en ningun lado.
+        </Alertcard>
+      );
+    }
+  }
+
   return (
     <FormularioStyles>
       <section className="  fomulario-container">
+        {Aviso()}
         <div className="formulario__info">
           <div className="formulario__info-text">
             <h2 className="formulario__title">Bienvenido a Skycomeet</h2>

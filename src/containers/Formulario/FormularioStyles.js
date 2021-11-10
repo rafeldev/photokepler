@@ -3,6 +3,7 @@ import "./Formulario.css";
 
 export const FormularioStyles = styled.section`
   background-color: var(--secun-color);
+
   .fomulario-container {
     display: flex;
     height: 100vh;

@@ -8,6 +8,7 @@ export function PhotoDaySection({ photoOfDay }) {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
   if (!photoOfDay) return <div />;
 
   return (

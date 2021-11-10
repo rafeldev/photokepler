@@ -20,7 +20,8 @@ export const InfoNasaStyles = styled.section`
     min-width: 40%;
     height: 272px;
     /* margin-right: 50px; */
-
+    border-radius: 8px;
+    overflow: hidden;
     justify-self: center;
     align-self: center;
     display: flex;
