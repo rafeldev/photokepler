@@ -18,6 +18,7 @@ export function Cardmain({ datos }) {
     photoByDate.explanation &&
     photoByDate.explanation.substring(0, 150) + " ...";
 
+  //Validar:
   if (!photoByDate) return <div />;
 
   const onClickExportar = () => {
