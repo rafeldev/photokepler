@@ -15,8 +15,7 @@ export function Cardmain({ datos }) {
 
   //Recorte de string de la descripcion de la foto:
   let descriptionByDate =
-    photoByDate.explanation &&
-    photoByDate.explanation.substring(0, 150) + " ...";
+    photoByDate.explanation && photoByDate.explanation.slice(0, 169) + " ...";
 
   //Validar:
   if (!photoByDate) return <div />;
