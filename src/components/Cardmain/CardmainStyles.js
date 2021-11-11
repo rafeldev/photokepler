@@ -14,25 +14,35 @@ export const CardmainStyles = styled.section`
     background: var(--card-gradient-color);
     border-radius: 5px;
     margin-bottom: 2rem;
+    overflow: hidden;
+    .cardmain__info {
+      display: flex;
+      flex-direction: column;
+    }
     .cardmain__name {
       font-weight: 500;
       font-size: 20px;
     }
     em {
+      width: 35%;
       font-size: 14px;
       background-color: rgba(144, 105, 222, 0.22);
       padding: 0.1rem 1rem;
       border-radius: 5px;
+    }
+    strong {
+      font-size: 14px;
+      margin-top: 0.7rem;
     }
     p {
       font-size: 14px;
       line-height: 23px;
       margin-bottom: 0.2rem;
     }
+
     .cardmain__description {
-      margin-top: 0.7rem;
-      font-size: 14px;
-      line-height: 26px;
+      font-size: 13px;
+      line-height: 20px;
       color: #cedbee;
     }
   }

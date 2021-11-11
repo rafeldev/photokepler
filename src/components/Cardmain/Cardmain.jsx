@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { CardmainStyles } from "./CardmainStyles";
-import html2canvas from "html2canvas";
+
 import * as htmlToImage from "html-to-image";
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
 
@@ -12,6 +12,11 @@ import styled from "styled-components";
 export function Cardmain({ datos }) {
   const photoByDate = useSelector((state) => state.photoByDate);
   const { name } = datos;
+
+  //Recorte de string de la descripcion de la foto:
+  let descriptionByDate =
+    photoByDate.explanation &&
+    photoByDate.explanation.substring(0, 150) + " ...";
 
   if (!photoByDate) return <div />;
 
@@ -38,23 +43,21 @@ export function Cardmain({ datos }) {
         <ImgCard className="cardmain-img">
           <img id="img" src={photoByDate.url} alt={photoByDate.title} />
         </ImgCard>
-        <section>
-          <h3 className="cardmain__name">{name}!</h3>
-          <p>Esta foto se tomó en espacio el día de tu cumple</p>
+        <section className="cardmain__info">
+          <h3 className="cardmain__name">{name}</h3>
+          <p>Esta foto se tomó en el espacio el día de tu cumple</p>
           <em>{photoByDate.date}</em>
-          <p className="cardmain__description">
-            La galaxia Andromeda es una galaxia espiral con un diámetro de
-            doscientos veinte mil años luz.
-          </p>
+          <strong>{photoByDate.title}</strong>
+          <p className="cardmain__description">{descriptionByDate}</p>
         </section>
       </div>
 
       {/* <button onClick={copyImage}>crear</button> */}
-      <button onClick={onClickExportar}>Exportar</button>
-      {/* <button>Descargar</button> */}
-      {/* <div className="card__download-bts">
+      {/* <button onClick={onClickExportar}>Exportar</button> */}
+
+      <div className="card__download-bts">
         <Button>Descargar</Button>
-      </div> */}
+      </div>
     </CardmainStyles>
   );
 }

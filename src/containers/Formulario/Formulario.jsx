@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import FullPageLoader from "../../utils/FullPageLoader/FullPageLoader";
 
 import { Alertcard } from "../../components/Alertcard/Alertcard";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useState } from "react";
 
 export function Formulario({ setDatos, datos }) {
@@ -45,16 +45,6 @@ export function Formulario({ setDatos, datos }) {
 
   const isLoading = useSelector((state) => state.loading);
 
-  // function handleChangeName(event) {
-  //   setName(event.target.value);
-  // }
-
-  // function handleChangeMonth(event) {
-  //   setMonth(event.target.value);
-  // }
-  // function handleChangeDay(event) {
-  //   setDay(event.target.value);
-  // }
   return (
     <>
       <FormularioStyles>
