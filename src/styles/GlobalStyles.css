@@ -13,6 +13,7 @@
   --input-color: #3a187f;
   --input-color-2: rgba(58, 24, 127, 0.22);
   --font-color-1: #7152d0;
+  --font-color-2: #cedbee;
   --grey: #c9c5c8;
   --grey-font: #aaaaaa;
   --boton-grey: #d5d7db;
@@ -32,7 +33,7 @@
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 3rem;
   --h1-font-size: 1.8rem;
-  --h2-font-size: 1.25rem;
+  --h2-font-size: 1.5rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;

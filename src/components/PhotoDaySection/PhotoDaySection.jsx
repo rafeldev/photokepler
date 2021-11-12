@@ -14,11 +14,8 @@ export function PhotoDaySection({ photoOfDay }) {
   return (
     <PhotoDayStyles id="photoDay">
       <div className="bd-container photoDay-container" data-aos="fade-up">
-        <h1 className="photoDay-title">Fotografía del día:</h1>
+        <h1 className="photoDay-title">Imagen astronomica del día:</h1>
         <div className="photoDay-box">
-          <picture className="photoDay__img">
-            <img src={photoOfDay.url} alt={photoOfDay.title} />
-          </picture>
           <article className="photoDay__info">
             <h3>{photoOfDay.title}</h3>
             <h4>{photoOfDay.date}</h4>
@@ -26,6 +23,9 @@ export function PhotoDaySection({ photoOfDay }) {
 
             {/* <h6>Copyright: {photoData.copyright}</h6> */}
           </article>
+          <picture className="photoDay__img">
+            <img src={photoOfDay.url} alt={photoOfDay.title} />
+          </picture>
         </div>
       </div>
     </PhotoDayStyles>
