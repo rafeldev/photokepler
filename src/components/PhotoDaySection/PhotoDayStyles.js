@@ -65,9 +65,12 @@ export const PhotoDayStyles = styled.section`
       }
     }
   }
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 472px) {
     .photoDay-title {
       font-size: var(--h2-font-size);
+    }
+    .photoDay-box {
+      padding: 1rem;
     }
   }
 `;
