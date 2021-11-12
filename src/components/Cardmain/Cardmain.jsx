@@ -15,7 +15,7 @@ export function Cardmain({ datos }) {
 
   //Recorte de string de la descripcion de la foto:
   let descriptionByDate =
-    photoByDate.explanation && photoByDate.explanation.slice(0, 169) + " ...";
+    photoByDate.explanation && photoByDate.explanation.slice(0, 130) + " ...";
 
   //Validar:
   if (!photoByDate) return <div />;
@@ -39,6 +39,8 @@ export function Cardmain({ datos }) {
 
   return (
     <CardmainStyles>
+      <h2 className="cardmain__title">Hey {name}, esta es tu foto!</h2>
+
       <div className="cardmain-container" id="photo">
         <ImgCard className="cardmain-img">
           <img id="img" src={photoByDate.url} alt={photoByDate.title} />

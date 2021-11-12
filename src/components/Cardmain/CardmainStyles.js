@@ -5,6 +5,10 @@ export const CardmainStyles = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .cardmain__title {
+    margin-bottom: 1.5rem;
+    font-size: var(--h1-font-size);
+  }
   .cardmain-container {
     display: flex;
     flex-direction: column;
