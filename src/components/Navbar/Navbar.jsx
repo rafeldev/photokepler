@@ -18,7 +18,7 @@ export default function Navbar() {
   const changeBackground = () => {
     console.log(window.scrollY);
 
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 80 || showMobileMenu === true) {
       setNavbar(true);
     } else {
       setNavbar(false);
