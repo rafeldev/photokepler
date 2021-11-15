@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 // import Aos from "aos";
 // import "aos/dist/aos.css";
 import { NavbarStyles } from "./NavbarStyles";
@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <NavbarStyles>
-      <nav className={navbar ? "navbar active" : "navbar"}>
+      <nav className={navbar ? "navbar active-nav" : "navbar"}>
         <div className="wrapper bd-container">
           <div data-aos="fade" className="nav__logo">
             <Link to="/">
@@ -48,32 +48,36 @@ export default function Navbar() {
             className={!showMobileMenu ? "nav__menu " : "nav__menu open__menu"}
           >
             <li className="nav__item">
-              <Link
+              <NavLink
+                exact
                 to="/"
                 className="nav__link"
                 onClick={() => setShowMobileMenu(!showMobileMenu)}
+                activeClassName="active-link"
               >
                 Inicio
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link
+              <NavLink
                 to="/acercade"
                 className="nav__link"
                 onClick={() => setShowMobileMenu(!showMobileMenu)}
+                activeClassName="active-link"
               >
                 Acerca de
-              </Link>
+              </NavLink>
             </li>
-            <li className="nav__item">
-              <Link
+            {/* <li className="nav__item">
+              <NavLink
                 to="/#photoDay"
                 className="nav__link"
                 onClick={() => setShowMobileMenu(!showMobileMenu)}
+                activeClassName="active-link"
               >
                 Imagen del día
-              </Link>
-            </li>
+              </NavLink>
+            </li> */}
           </ul>
         </div>
       </nav>

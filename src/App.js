@@ -13,10 +13,10 @@ function App() {
   // de esta forma es mas facil pasar la data de padre a hijo a traves de props,
   //Siempre intentemos manejar la logica desde el container padre.
   const [datos, setDatos] = useState({
-    name: '',
-    month: '',
-    day: ''
-  })
+    name: "",
+    month: "",
+    day: "",
+  });
   // const [name, setName] = useState("");
   // const [month, setMonth] = useState("");
   // const [day, setDay] = useState("");
@@ -28,21 +28,16 @@ function App() {
         <ScrollToTop />
         <Switch>
           <Route exact path="/downloadpage">
-            <Downloadpage
-              datos={datos}
-            />
+            <Downloadpage datos={datos} />
           </Route>
           <Route path="/formulario">
             {/* El formulario se le envian los metodos que actualizan el estado y los estados */}
-            <Formulario
-              setDatos={setDatos}
-              datos={datos}
-            />
+            <Formulario setDatos={setDatos} datos={datos} />
           </Route>
           <Route path="/acercade">
             <About />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>

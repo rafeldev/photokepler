@@ -17,11 +17,12 @@ export const NavbarStyles = styled.nav`
     }
   }
 
-  .active {
+  .active-nav {
     background-color: var(--tercer-color);
     -webkit-box-shadow: 6px 3px 16px -6px #000000;
     box-shadow: 6px 3px 16px -6px #000000;
   }
+
   .wrapper {
     width: 100%;
     height: 100%;
@@ -66,11 +67,13 @@ export const NavbarStyles = styled.nav`
     transition: 0.5s all ease;
     &:hover {
       color: var(--white);
-
+      background-color: var(--hover-color-3);
       border: solid 1px var(--white);
       border-radius: 6px;
-      /* transition: all 0.2s ease-out; */
     }
+  }
+  .active-link {
+    color: var(--white);
   }
   .nav__icon-menu {
     display: none;

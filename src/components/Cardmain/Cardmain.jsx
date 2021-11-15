@@ -70,9 +70,9 @@ export function Cardmain({ datos }) {
       {/* <button onClick={copyImage}>crear</button> */}
       {/* <button onClick={onClickExportar}>Exportar</button> */}
 
-      <div className="card__download-bts">
+      {/* <div className="card__download-bts">
         <Button>Descargar</Button>
-      </div>
+      </div> */}
     </CardmainStyles>
   );
 }
