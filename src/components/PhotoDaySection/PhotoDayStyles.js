@@ -58,7 +58,7 @@ export const PhotoDayStyles = styled.section`
     }
     .photoDay__img {
       width: 100%;
-      height: 400px;
+      height: 300px;
       margin-bottom: 1rem;
       img {
         object-fit: cover;
@@ -70,7 +70,18 @@ export const PhotoDayStyles = styled.section`
       font-size: var(--h2-font-size);
     }
     .photoDay-box {
-      padding: 1rem;
+      padding: 1.5rem;
+    }
+    .photoDay__info {
+      h3 {
+        font-size: var(--h3-font-size);
+      }
+      h4 {
+        font-size: var(--h4-font-size);
+      }
+      p {
+        font-size: 0.8rem;
+      }
     }
   }
 `;
