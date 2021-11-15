@@ -134,4 +134,7 @@ export const CardmainStyles = styled.section`
       }
     }
   }
+  .cardmain-img-active {
+    height: 250px;
+  }
 `;

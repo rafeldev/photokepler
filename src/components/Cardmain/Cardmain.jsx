@@ -60,7 +60,7 @@ export function Cardmain({ datos }) {
         </ImgCard>
         <section className="cardmain__info-active">
           <h3 className="cardmain__name-active">{name}</h3>
-          <p>Esta foto de APOD se tomó el día de tu cumple</p>
+          <p>Esta foto se tomó al espacio el día de tu cumpleaños</p>
           <em>{photoByDate.date}</em>
           <strong>{photoByDate.title}</strong>
           <p className="cardmain__description-active">{descriptionByDate}</p>

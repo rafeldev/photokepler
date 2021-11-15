@@ -126,7 +126,7 @@ export const FormularioStyles = styled.section`
     }
     .formulario__form {
       width: 100%;
-      padding: 10rem 0;
+      padding: 7rem 0;
       .formulario__form-grup {
         width: 85%;
       }
