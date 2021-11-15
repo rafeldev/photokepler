@@ -18,7 +18,7 @@ export default function Navbar() {
   const changeBackground = () => {
     console.log(window.scrollY);
 
-    if (window.scrollY >= 80 || showMobileMenu === true) {
+    if (window.scrollY >= 80) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -47,6 +47,20 @@ export default function Navbar() {
           <ul
             className={!showMobileMenu ? "nav__menu " : "nav__menu open__menu"}
           >
+            <div className="nav__header-mobile">
+              <div data-aos="fade" className="nav__logo-mobile">
+                <Link to="/">
+                  <img src={logoNav} alt="" />
+                </Link>
+              </div>
+              <div
+                className="nav__icon-close iconSize"
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+              >
+                <CgClose />
+              </div>
+            </div>
+
             <li className="nav__item">
               <NavLink
                 exact

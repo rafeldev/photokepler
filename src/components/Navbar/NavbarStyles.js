@@ -75,9 +75,12 @@ export const NavbarStyles = styled.nav`
   .active-link {
     color: var(--white);
   }
-  .nav__icon-menu {
+  .nav__icon-menu,
+  .nav__icon-close,
+  .nav__logo-mobile {
     display: none;
   }
+
   @media screen and (max-width: 960px) {
     .nav__menu {
       background-color: var(--tercer-color);
@@ -92,13 +95,29 @@ export const NavbarStyles = styled.nav`
       justify-content: flex-start;
       align-items: flex-start;
       transition: 0.5s all ease;
+
+      .nav__header-mobile {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .nav__logo-mobile {
+          display: initial;
+          width: 150px;
+          margin: 1.2rem;
+        }
+        .nav__icon-close {
+          display: initial;
+          align-self: flex-end;
+          margin: 1rem;
+        }
+      }
     }
     .nav__logo {
       width: 150px;
     }
     .nav__menu.open__menu {
       width: 100%;
-      top: 60px;
+      top: 0px;
       /* right: 0; */
       bottom: 0;
       margin: 0;
