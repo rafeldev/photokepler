@@ -41,7 +41,7 @@ export function Cardmain({ datos }) {
     <CardmainStyles>
       <h2 className="cardmain__title">Hey {name}, esta es tu foto!</h2>
 
-      <div className="cardmain-container" id="photo">
+      <div className="cardmain-container-one" id="photo">
         <ImgCard className="cardmain-img">
           <img id="img" src={photoByDate.url} alt={photoByDate.title} />
         </ImgCard>
@@ -51,6 +51,19 @@ export function Cardmain({ datos }) {
           <em>{photoByDate.date}</em>
           <strong>{photoByDate.title}</strong>
           <p className="cardmain__description">{descriptionByDate}</p>
+        </section>
+      </div>
+      {/* ======================== la vista ============================ */}
+      <div className="cardmain-container-active">
+        <ImgCard className="cardmain-img-active">
+          <img id="img" src={photoByDate.url} alt={photoByDate.title} />
+        </ImgCard>
+        <section className="cardmain__info-active">
+          <h3 className="cardmain__name-active">{name}</h3>
+          <p>Esta foto se tomó en el espacio el día de tu cumple</p>
+          <em>{photoByDate.date}</em>
+          <strong>{photoByDate.title}</strong>
+          <p className="cardmain__description-active">{descriptionByDate}</p>
         </section>
       </div>
 

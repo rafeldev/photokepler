@@ -86,11 +86,12 @@ export const FormularioStyles = styled.section`
       padding: 0.7rem 1rem;
       border-radius: 7px;
       cursor: pointer;
-      transition: 1s;
+      transition: 0.3s;
       border: 2px solid var(--main-color);
       :hover {
-        border: 2px solid var(--white);
-        background-color: var(--input-color);
+        transform: translateY(-0.35rem);
+        border: 2px solid var(--main-color);
+        background-color: var(--hover-color);
         color: var(--white);
       }
     }

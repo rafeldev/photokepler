@@ -17,7 +17,7 @@ export function Formulario({ setDatos, datos }) {
     Aos.init({ duration: 2000 });
   }, []);
 
-  const [aviso, setAviso] = useState(true);
+  // const [aviso, setAviso] = useState(true);
   const dispatch = useDispatch();
   const history = useHistory();
   const date = `2019-${datos.month}-${datos.day}`;
@@ -35,20 +35,21 @@ export function Formulario({ setDatos, datos }) {
     });
     console.log("fecha", datos.name + " " + datos.month + " " + datos.day);
   };
-  const closeAlert = (e) => {
-    setAviso(false);
-  };
 
-  function Aviso() {
-    if (aviso) {
-      return (
-        <Alertcard close={closeAlert}>
-          Hey! la información que introduces solo es para encontrar la foto, no
-          se guarda en ningun lado.
-        </Alertcard>
-      );
-    }
-  }
+  // const closeAlert = (e) => {
+  //   setAviso(false);
+  // };
+
+  // function Aviso() {
+  //   if (aviso) {
+  //     return (
+  //       <Alertcard close={closeAlert}>
+  //         Hey! la información que introduces solo es para encontrar la foto, no
+  //         se guarda en ningun lado.
+  //       </Alertcard>
+  //     );
+  //   }
+  // }
 
   const isLoading = useSelector((state) => state.loading);
 

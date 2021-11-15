@@ -18,14 +18,17 @@ export const ButtonStyle = styled.div`
         ? "2px solid var(--main-color)"
         : "2px solid var(--main-color)"};
     color: ${(props) => (props.outline ? "var(--main-color)" : "var(--white)")};
-    transition: 1s;
+    transition: 0.5s;
     cursor: pointer;
     :hover {
+      transform: translateY(-0.35rem);
       background-color: ${(props) =>
-        props.outline ? "var(--input-color)" : "var(--input-color)"};
+        props.outline ? "var(--hover-color-2)" : "var(--hover-color)"};
       color: ${(props) => (props.outline ? "var(--white)" : "var(--white)")};
       border: ${(props) =>
-        props.outline ? "2px solid var(--white)" : " 2px solid var(--white)"};
+        props.outline
+          ? "2px solid var(--main-color)"
+          : " 2px solid var(--hover-color)"};
     }
   }
   /* @media only screen and (max-width: 768px) {
