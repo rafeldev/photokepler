@@ -22,6 +22,9 @@ export const FormularioStyles = styled.section`
       margin-left: 1.5rem;
     }
   }
+  .formulario__info-text-right {
+    display: none;
+  }
   .formulario__form {
     background-color: var(--tercer-color);
     width: 50%;
@@ -97,11 +100,33 @@ export const FormularioStyles = styled.section`
     }
   }
   @media only screen and (max-width: 893px) {
+    .formulario__info-text-right {
+      display: initial;
+      width: 85%;
+      .formulario__title {
+        font-size: var(--h2-font-size);
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    .formulario__title {
+      margin-bottom: 1.5rem;
+      font-size: var(--h1-font-size);
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+    li {
+      list-style: initial;
+      margin-left: 1.5rem;
+    }
     .fomulario-container {
       justify-content: center;
     }
     .formulario__form {
       width: 100%;
+      padding: 10rem 0;
       .formulario__form-grup {
         width: 85%;
       }

@@ -82,6 +82,23 @@ export function Formulario({ setDatos, datos }) {
             className="formulario__form"
             data-aos="fade"
           >
+            <div className="formulario__info-text-right" data-aos="fade-up">
+              <h2 className="formulario__title">Bienvenido a Skycomeet</h2>
+              <p>
+                Skycomeet te sirve para ver que foto se tomó al espacio el día
+                de tu cumpleaños, para verlas en un formato divertido y que
+                puedes compartir con amigos.
+              </p>
+
+              {/* <ul>
+                <li>Tu información NO se guarda ni se comparte</li>
+                <li>Es una web segura</li>
+                <li>
+                  Las fotos son sacadas directamente de la galeria de la API
+                  NASA official
+                </li>
+              </ul> */}
+            </div>
             <div className="formulario__form-grup">
               <label htmlFor="">Nombre</label>
               <input
