@@ -121,4 +121,17 @@ export const CardmainStyles = styled.section`
       border-radius: 5px;
     }
   }
+  @media screen and (max-width: 403px) {
+    .cardmain__title {
+      margin-bottom: 1rem;
+      font-size: var(--h2-font-size);
+    }
+    .cardmain-container-active {
+      width: 100%;
+      height: auto;
+      em {
+        width: 42%;
+      }
+    }
+  }
 `;
