@@ -19,9 +19,9 @@ export const creatorData = [
   },
   {
     name: "Miguel Ruz",
-    rol: "Dieseñador UI",
+    rol: "Dieseñador UX/UI",
     img: migue,
-    network: "Twitter",
-    link: "https://twitter.com/pdromoreno7/",
+    network: "Behance",
+    link: "https://www.behance.net/miguel_ruz",
   },
 ];
