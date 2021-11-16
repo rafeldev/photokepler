@@ -129,6 +129,7 @@ export const CardmainStyles = styled.section`
     .cardmain-container-active {
       width: 100%;
       height: auto;
+      padding: 1rem;
       em {
         width: 42%;
       }
