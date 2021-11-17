@@ -9,6 +9,7 @@ export const CardmainStyles = styled.section`
   .cardmain__title {
     margin-bottom: 1.5rem;
     font-size: var(--h1-font-size);
+    /* text-align: center; */
   }
   .cardmain-container-one {
     display: none;

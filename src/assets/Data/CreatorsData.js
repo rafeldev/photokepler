@@ -7,8 +7,8 @@ export const creatorData = [
     name: "Pedro Moreno",
     rol: "Frontend Developer",
     img: pedroimg,
-    network: "Twitter",
-    link: "https://twitter.com/pdromoreno7/",
+    network: "LinkedIn",
+    link: "https://www.linkedin.com/in/pedro-moreno-alvarez/",
   },
   {
     name: "Rafael Alvarez",

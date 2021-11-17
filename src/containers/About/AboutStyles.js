@@ -16,7 +16,7 @@ export const AboutStyles = styled.div`
     p {
       width: 60%;
       line-height: 30px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
   }
   .about__info-title {
@@ -104,6 +104,14 @@ export const AboutStyles = styled.div`
     .about__cardNasa-info {
       h3 {
         font-size: var(--h2-font-size);
+      }
+    }
+    .about__frase-box {
+      p {
+        font-size: 1.2rem;
+      }
+      em {
+        font-size: 1.2rem;
       }
     }
   }
