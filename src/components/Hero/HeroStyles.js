@@ -15,9 +15,12 @@ export const HeroStyles = styled.section`
   }
   .hero__description {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 20px 0;
     width: 60%;
     text-align: center;
+  }
+  .hero__button {
+    margin-top: 1rem;
   }
   @media only screen and (max-width: 511px) {
     .hero__title {

@@ -1,14 +1,23 @@
 import styled from "styled-components";
 export const NavbarStyles = styled.nav`
-  position: fixed;
-  z-index: var(--z-fixed);
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 70px;
-  background-color: transparent;
-  transition: 1s;
-  :hover {
+  .navbar {
+    position: fixed;
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+
+    transition: 0.5s;
+    :hover {
+      background-color: var(--tercer-color);
+      -webkit-box-shadow: 6px 3px 16px -6px #000000;
+      box-shadow: 6px 3px 16px -6px #000000;
+    }
+  }
+
+  .active-nav {
     background-color: var(--tercer-color);
     -webkit-box-shadow: 6px 3px 16px -6px #000000;
     box-shadow: 6px 3px 16px -6px #000000;
@@ -58,51 +67,71 @@ export const NavbarStyles = styled.nav`
     transition: 0.5s all ease;
     &:hover {
       color: var(--white);
-
+      background-color: var(--hover-color-3);
       border: solid 1px var(--white);
       border-radius: 6px;
-      /* transition: all 0.2s ease-out; */
     }
   }
-  .nav__icon-menu {
+  .active-link {
+    color: var(--white);
+  }
+  .nav__icon-menu,
+  .nav__icon-close,
+  .nav__logo-mobile {
     display: none;
   }
+
   @media screen and (max-width: 960px) {
-    background-color: var(--tercer-color);
-    -webkit-box-shadow: 6px 3px 16px -6px #000000;
-    box-shadow: 6px 3px 16px -6px #000000;
-    height: 60px;
     .nav__menu {
       background-color: var(--tercer-color);
       position: absolute;
-      top: 60px;
+      top: -79rem;
 
-      right: -110%;
+      left: 0;
+      /* right: -110%; */
       width: 100%;
       height: 100vh;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
       transition: 0.5s all ease;
+
+      .nav__header-mobile {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .nav__logo-mobile {
+          display: initial;
+          width: 150px;
+          margin: 1.2rem;
+        }
+        .nav__icon-close {
+          display: initial;
+          align-self: flex-end;
+          margin: 1rem;
+        }
+      }
     }
     .nav__logo {
       width: 150px;
     }
     .nav__menu.open__menu {
-      width: 50%;
-      right: 0;
+      width: 100%;
+      top: 0px;
+      /* right: 0; */
+      bottom: 0;
       margin: 0;
     }
     .nav__item {
       width: 100%;
       height: 70px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
     }
     .nav__link {
-      width: 100%;
-      background-color: var(--main-color);
+      /* width: 100%; */
+      /* background-color: var(--main-color); */
       border-radius: 0;
       padding: 0.5rem 1.2rem;
       margin-top: 30px;

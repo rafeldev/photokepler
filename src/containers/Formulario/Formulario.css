@@ -1,0 +1,16 @@
+.formulario__info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 0;
+  height: 100%;
+  background-image: url(../../assets/image/formularios-imagenes.png);
+  background-size: cover;
+}
+
+@media only screen and (max-width: 893px) {
+  .formulario__info {
+    display: none;
+  }
+}

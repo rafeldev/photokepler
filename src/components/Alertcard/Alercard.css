@@ -1,0 +1,35 @@
+.alertcard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 314px;
+  height: 24%;
+  background: var(--card-gradient-color);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.alertcard p {
+  margin-bottom: 1rem;
+}
+.alertcard__button {
+  background-color: var(--main-color);
+  color: var(--white);
+  font-size: 1rem;
+  max-width: 7rem;
+  outline: none;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 1s;
+  border: 2px solid var(--main-color);
+}
+.alertcard__button:hover {
+  border: 2px solid var(--white);
+  background-color: var(--input-color);
+  color: var(--white);
+}

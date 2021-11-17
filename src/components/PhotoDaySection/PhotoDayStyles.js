@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const PhotoDayStyles = styled.section`
-  padding: 3rem 0;
+  padding: 7rem 0;
   background-color: var(--tercer-color);
   .photoDay-container {
   }
@@ -13,17 +13,17 @@ export const PhotoDayStyles = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    background: var(--card-gradient-color);
+    padding: 2rem;
+    border-radius: 8px;
     h4 {
       margin-bottom: 10px;
     }
   }
   .photoDay__img {
-    width: 600px;
-    /* flex-basis: 600px; */
-    height: 500px;
-    /* margin-right: 50px; */
-    margin-bottom: 30px;
+    width: 500px;
+
+    height: 400px;
 
     img {
       width: 100%;
@@ -34,13 +34,15 @@ export const PhotoDayStyles = styled.section`
   }
   .photoDay__info {
     max-width: 600px;
-
+    height: 400px;
     h3 {
       font-size: var(--h2-font-size);
       margin-bottom: 20px;
     }
     p {
+      font-size: 0.9rem;
       margin-bottom: 10px;
+      color: var(--font-color-2);
     }
   }
   @media screen and (max-width: 1260px) {
@@ -48,14 +50,37 @@ export const PhotoDayStyles = styled.section`
     flex-direction: column;
     align-items: center;
     .photoDay-box {
-      flex-direction: column;
+      flex-direction: column-reverse;
       width: 100%;
+    }
+    .photoDay__info {
+      height: auto;
     }
     .photoDay__img {
       width: 100%;
-      height: 400px;
+      height: 300px;
+      margin-bottom: 1rem;
       img {
         object-fit: cover;
+      }
+    }
+  }
+  @media screen and (max-width: 472px) {
+    .photoDay-title {
+      font-size: var(--h2-font-size);
+    }
+    .photoDay-box {
+      padding: 1.5rem;
+    }
+    .photoDay__info {
+      h3 {
+        font-size: var(--h3-font-size);
+      }
+      h4 {
+        font-size: var(--h4-font-size);
+      }
+      p {
+        font-size: 0.8rem;
       }
     }
   }

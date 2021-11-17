@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterStyles = styled.footer`
-  width: 100%;
+  /* width: 100%; */
   background-color: var(--secun-color);
   border-top: 1px solid rgba(119, 136, 180, 0.15);
   .footer__container {
@@ -44,6 +44,17 @@ export const FooterStyles = styled.footer`
     :hover {
       color: var(--font-color-2);
       transition: 0.2s ease-out;
+    }
+  }
+  .footer__copy {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    /* border-top: 1px solid rgba(119, 136, 180, 0.15); */
+
+    p {
+      color: #cedbee;
+      text-align: center;
     }
   }
   @media screen and (max-width: 960px) {

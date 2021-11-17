@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 // import Aos from "aos";
 // import "aos/dist/aos.css";
 import { NavbarStyles } from "./NavbarStyles";
@@ -7,52 +8,93 @@ import logoNav from "../../assets/image/LOGO.svg";
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
   // useEffect(() => {
   //   Aos.init({ duration: 2000 });
   // }, []);
 
+  /*===== CHANGE COLOR NAVBAR =====*/
+  const changeBackground = () => {
+    console.log(window.scrollY);
+
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <NavbarStyles>
-      <div className="wrapper bd-container">
-        <div data-aos="fade" className="nav__logo">
-          <img src={logoNav} alt="" />
-        </div>
+      <nav className={navbar ? "navbar active-nav" : "navbar"}>
+        <div className="wrapper bd-container">
+          <div data-aos="fade" className="nav__logo">
+            <Link to="/">
+              <img src={logoNav} alt="" />
+            </Link>
+          </div>
 
-        <div
-          className="nav__icon-menu iconSize"
-          onClick={() => setShowMobileMenu(!showMobileMenu)}
-        >
-          {showMobileMenu ? <CgClose /> : <CgMenu />}
-        </div>
-
-        <ul className={!showMobileMenu ? "nav__menu " : "nav__menu open__menu"}>
-          {/* <div
+          <div
             className="nav__icon-menu iconSize"
             onClick={() => setShowMobileMenu(!showMobileMenu)}
           >
-            <CgClose />
-          </div> */}
-          <li className="nav__item">
-            <a
-              href="#inicio"
-              className="nav__link"
-              onClick={() => setShowMobileMenu(!showMobileMenu)}
-            >
-              Acerca de
-            </a>
-          </li>
-          <li className="nav__item">
-            <a
-              href="#proyect"
-              className="nav__link"
-              onClick={() => setShowMobileMenu(!showMobileMenu)}
-            >
-              Imagen del día
-            </a>
-          </li>
-        </ul>
-      </div>
+            {showMobileMenu ? <CgClose /> : <CgMenu />}
+          </div>
+
+          <ul
+            className={!showMobileMenu ? "nav__menu " : "nav__menu open__menu"}
+          >
+            <div className="nav__header-mobile">
+              <div data-aos="fade" className="nav__logo-mobile">
+                <Link to="/">
+                  <img src={logoNav} alt="" />
+                </Link>
+              </div>
+              <div
+                className="nav__icon-close iconSize"
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+              >
+                <CgClose />
+              </div>
+            </div>
+
+            <li className="nav__item">
+              <NavLink
+                exact
+                to="/"
+                className="nav__link"
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+                activeClassName="active-link"
+              >
+                Inicio
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/acercade"
+                className="nav__link"
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+                activeClassName="active-link"
+              >
+                Acerca de
+              </NavLink>
+            </li>
+            {/* <li className="nav__item">
+              <NavLink
+                to="/#photoDay"
+                className="nav__link"
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+                activeClassName="active-link"
+              >
+                Imagen del día
+              </NavLink>
+            </li> */}
+          </ul>
+        </div>
+      </nav>
     </NavbarStyles>
   );
 }
