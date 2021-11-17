@@ -17,9 +17,11 @@ export function PhotoDaySection({ photoOfDay }) {
         <h1 className="photoDay-title">Imagen astronomica del día:</h1>
         <div className="photoDay-box">
           <article className="photoDay__info">
-            <h3>{photoOfDay.title}</h3>
+            <h3 lang="en">{photoOfDay.title}</h3>
             <h4>{photoOfDay.date}</h4>
-            <p class="card-text">{photoOfDay.explanation}</p>
+            <p lang="en" class="card-text">
+              {photoOfDay.explanation}
+            </p>
 
             {/* <h6>Copyright: {photoData.copyright}</h6> */}
           </article>
