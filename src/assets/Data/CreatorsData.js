@@ -14,8 +14,8 @@ export const creatorData = [
     name: "Rafael Alvarez",
     rol: "Frontend Developer",
     img: rafaimg,
-    network: "Twitter",
-    link: "https://twitter.com/pdromoreno7/",
+    network: "LinkedIn",
+    link: "https://www.linkedin.com/in/rafedev/",
   },
   {
     name: "Miguel Ruz",
