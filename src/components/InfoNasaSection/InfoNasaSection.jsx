@@ -1,6 +1,6 @@
 import { InfoNasaStyles } from "./InfoNasaStyles";
 // import imgHublle from "../../assets/image/telescopio-hubble.png";
-
+import videonasa from "../../assets/video/video-nasa-skycomeet.mp4";
 import { Button } from "../Button/Button";
 import { ImArrowRight2 } from "react-icons/im";
 import Aos from "aos";
@@ -41,7 +41,7 @@ export function InfoNasaSection() {
           <div className="infoNasa__img">
             {/* <img src={imgHublle} alt="Telescopio Hubble" /> */}
 
-            <iframe
+            {/* <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/0m0Keomc3DM?autoplay=1&playlist=0m0Keomc3DM&loop=1&autopause=0&mute=1"
@@ -50,7 +50,18 @@ export function InfoNasaSection() {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-            ></iframe>
+            ></iframe> */}
+            <video
+              // className="hero__img"
+              width="100%"
+              height="100%"
+              muted="true"
+              autoplay="true"
+              loop="true"
+              controls="true"
+            >
+              <source src={videonasa} type="video/mp4" alt="video nasa" />
+            </video>
           </div>
         </div>
       </div>
