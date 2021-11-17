@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { CardmainStyles } from "./CardmainStyles";
+import { CardmainSkeletonStyles } from "./CardmainStyles";
 
 import * as htmlToImage from "html-to-image";
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
@@ -47,20 +48,28 @@ export function Cardmain({ datos }) {
 
   const loader = () => {
     return (
-      <CardmainStyles>
+      <CardmainSkeletonStyles>
         <h2 className="cardmain__title">Hey {name}, esta es tu foto!</h2>
 
-        <div className="cardmain-container-active">
-          <picture className="cardmain-img-active"></picture>
-          <section className="cardmain__info-active">
-            <h3 className="cardmain__name-active"></h3>
-            <p></p>
-            <em> </em>
-            <strong></strong>
-            <p className="cardmain__description-active"></p>
+        <div className="cardmain-container-skeleton skeleton">
+          <picture className="cardmain-img-skeleton skeleton"></picture>
+          <section className="cardmain__info-skeleton ">
+            <h3 className="cardmain__name-skeleton ">
+              <div className="skeleton skeleton-text"></div>
+            </h3>
+            <p>
+              <div className="skeleton skeleton-text"></div>
+            </p>
+            <em></em>
+            <strong>
+              <div className="skeleton skeleton-text"></div>
+            </strong>
+            <p className="cardmain__description-skeleton">
+              <div className="skeleton skeleton-text"></div>
+            </p>
           </section>
         </div>
-      </CardmainStyles>
+      </CardmainSkeletonStyles>
     );
   };
 
