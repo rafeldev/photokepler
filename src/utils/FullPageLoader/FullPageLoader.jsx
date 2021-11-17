@@ -1,18 +1,17 @@
 import React from 'react';
-// import { SemipolarLoading } from 'react-loadingg';
+import ReactLoading from 'react-loading';
 import { LoaderContainer, Div } from './Styles';
 
 /* Componente loader de carga  */
 /*
  * @param  {} isLoading: Contiene el estado de si está o no cargando
  */
-const FullPageLoader = ({ isLoading }) => {
+const FullPageLoader = ({isLoading}) => {
   return (
     isLoading
       ? <LoaderContainer>
         <Div>
-          {/* <SemipolarLoading size='large' color='#FFF' /> */}
-          <h1>loader</h1>
+          <ReactLoading type='cylon' size='large' color='#E7127A' />
         </Div>
       </LoaderContainer>
       : null

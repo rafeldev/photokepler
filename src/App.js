@@ -7,6 +7,7 @@ import { Formulario } from "./containers/Formulario/Formulario";
 import { Downloadpage } from "./containers/Downloadpage/Downloadpage";
 import { About } from "./containers/About/About";
 import ScrollToTop from "./components/ScrollToTop";
+import FullPageLoader from "./utils/FullPageLoader/FullPageLoader";
 
 function App() {
   //Me toco mover la logica del state aca, porque es mas facil moverlo a los hijos ya que son dos componentes diferentes que ocupan la misma data

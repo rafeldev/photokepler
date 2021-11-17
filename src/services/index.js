@@ -13,7 +13,7 @@ import { URL_API, API_KEY } from '../constants/apis';
 //Services
 export const getPhotoOfDay = () => {
     return (dispatch) => {
-        //loading
+        dispatch(setLoading(true));
         axios.get(`${URL_API}=${API_KEY}`)
             .then(function (response) {
                 const { data } = response;
@@ -24,6 +24,7 @@ export const getPhotoOfDay = () => {
             })
             .finally(function () {
                 //alwas executed
+                dispatch(setLoading(false));
             })
     }
 }
