@@ -8,10 +8,18 @@ import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
 import { Button } from "../Button/Button";
 
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 
 export function Cardmain({ datos }) {
   const photoByDate = useSelector((state) => state.photoByDate);
+  const [loading, setLoading] = useState(true);
   const { name } = datos;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   //Recorte de string de la descripcion de la foto:
   let descriptionByDate =
@@ -36,6 +44,29 @@ export function Cardmain({ datos }) {
     background-image: url(${photoByDate.url});
     background-size: cover;
   `;
+
+  const loader = () => {
+    return (
+      <CardmainStyles>
+        <h2 className="cardmain__title">Hey {name}, esta es tu foto!</h2>
+
+        <div className="cardmain-container-active">
+          <picture className="cardmain-img-active"></picture>
+          <section className="cardmain__info-active">
+            <h3 className="cardmain__name-active"></h3>
+            <p></p>
+            <em> </em>
+            <strong></strong>
+            <p className="cardmain__description-active"></p>
+          </section>
+        </div>
+      </CardmainStyles>
+    );
+  };
+
+  if (loading) {
+    return loader();
+  }
 
   return (
     <CardmainStyles>
