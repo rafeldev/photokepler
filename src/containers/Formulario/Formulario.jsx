@@ -1,17 +1,20 @@
 import { FormularioStyles } from "./FormularioStyles";
-import { months, numberDays } from "./FormularioData";
+import { months, numberDays, rangeYear } from "./FormularioData";
 import { useHistory } from "react-router-dom";
 import { getPhotoByDate } from "../../services";
+
 import { useDispatch, useSelector } from "react-redux";
 import FullPageLoader from "../../utils/FullPageLoader/FullPageLoader";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import { Alertcard } from "../../components/Alertcard/Alertcard";
+// import { Alertcard } from "../../components/Alertcard/Alertcard";
 import { useEffect } from "react";
 import { useState } from "react";
 
 export function Formulario({ setDatos, datos }) {
+  const [año, setAño] = useState([]);
+  console.log(año);
   // Animacion Aos settting:
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -20,7 +23,8 @@ export function Formulario({ setDatos, datos }) {
   // const [aviso, setAviso] = useState(true);
   const dispatch = useDispatch();
   const history = useHistory();
-  const date = `2019-${datos.month}-${datos.day}`;
+
+  const date = `${año}-${datos.month}-${datos.day}`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,13 +32,17 @@ export function Formulario({ setDatos, datos }) {
     history.push("/downloadpage");
   };
 
-  const handleInputChange = (event) => {
+  useEffect(() => {
+    setAño(rangeYear);
+  }, []);
+
+  function handleInputChange(event) {
     setDatos({
       ...datos,
       [event.target.name]: event.target.value,
     });
     console.log("fecha", datos.name + " " + datos.month + " " + datos.day);
-  };
+  }
 
   // const closeAlert = (e) => {
   //   setAviso(false);
@@ -89,15 +97,6 @@ export function Formulario({ setDatos, datos }) {
                 de tu cumpleaños, para verlas en un formato divertido y que
                 puedes compartir con amigos.
               </p>
-
-              {/* <ul>
-                <li>Tu información NO se guarda ni se comparte</li>
-                <li>Es una web segura</li>
-                <li>
-                  Las fotos son sacadas directamente de la galeria de la API
-                  NASA official
-                </li>
-              </ul> */}
             </div>
             <div className="formulario__form-grup">
               <label htmlFor="">Nombre</label>

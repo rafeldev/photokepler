@@ -19,7 +19,7 @@ export function Cardmain({ datos }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   //Recorte de string de la descripcion de la foto:

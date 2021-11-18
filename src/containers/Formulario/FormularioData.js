@@ -62,3 +62,19 @@ for (let i = 1; i < 32; i++) {
   }
 }
 console.log(numberDays);
+
+// contador de años desde 1996, y resultado aleatorio:
+
+export function rangeYear() {
+  const max = new Date().getFullYear();
+  const min = max - 25;
+  const years = [];
+
+  for (let i = max; i >= min; i--) {
+    years.push(i);
+  }
+
+  let randomYear = years[Math.floor(Math.random() * years.length)];
+  console.log("random month =>", randomYear);
+  return randomYear;
+}

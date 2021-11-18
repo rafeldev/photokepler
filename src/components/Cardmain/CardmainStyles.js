@@ -255,7 +255,7 @@ export const CardmainSkeletonStyles = styled.section`
     }
     .cardmain-container-skeleton {
       width: 100%;
-      height: auto;
+      height: 450px;
       padding: 1rem;
       em {
         width: 42%;
