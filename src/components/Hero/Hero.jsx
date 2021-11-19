@@ -17,7 +17,7 @@ export function Hero() {
       <div className="hero__info" data-aos="fade-up">
         <h1 className="hero__title">Tu cumpleaños es algo espacial</h1>
         <p className="hero__description">
-          Puedes ver que foto se tomó al espacio el día de tu cumpleaños en un
+          Puedes ver que foto exhibió la NASA APOD el día de tu cumpleaños en un
           bonito formato
         </p>
         <Link to="/formulario" className="hero__button">

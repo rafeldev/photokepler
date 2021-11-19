@@ -12,8 +12,9 @@ export const CardCreatorsStyles = styled.div`
     align-items: center;
     justify-content: center;
     width: 287px;
-    height: 384px;
-    padding: 0.7rem 1rem;
+    /* height: 384px; */
+    height: auto;
+    padding: 1rem 1rem;
     background: var(--card-gradient-color);
     border-radius: 8px;
     strong {

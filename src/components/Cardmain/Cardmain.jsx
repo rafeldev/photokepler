@@ -87,7 +87,10 @@ export function Cardmain({ datos }) {
         </ImgCard>
         <section className="cardmain__info">
           <h3 className="cardmain__name">{name}</h3>
-          <p>Esta foto se tomó en el espacio el día de tu cumple</p>
+          <p>
+            Esta foto la exhibió la NASA como fotografia astronomica del dia en
+            el día de tu cumple
+          </p>
           <em>{photoByDate.date}</em>
           <strong>{photoByDate.title}</strong>
           <p className="cardmain__description">{descriptionByDate}</p>
@@ -100,7 +103,10 @@ export function Cardmain({ datos }) {
         </ImgCard>
         <section className="cardmain__info-active">
           <h3 className="cardmain__name-active">{name}</h3>
-          <p>Esta foto se tomó al espacio el día de tu cumpleaños</p>
+          <p>
+            Esta foto la exhibió la NASA como la imagen astronomica del dia, en
+            el día de tu cumple.
+          </p>
           <em>{photoByDate.date}</em>
           <strong lang="en">{photoByDate.title}</strong>
           <p className="cardmain__description-active" lang="en">

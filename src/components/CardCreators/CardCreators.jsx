@@ -9,9 +9,9 @@ export function CardCreators() {
     <CardCreatorsStyles>
       {creatorData.map((creator) => (
         <div className="cardcreator">
-          <picture className="cardcreator__img">
+          {/* <picture className="cardcreator__img">
             <img src={creator.img} alt={creator.name} />
-          </picture>
+          </picture> */}
 
           <strong className="cardcreator__name">{creator.name}</strong>
           <p className="cardcreator__rol">{creator.rol}</p>

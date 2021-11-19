@@ -13,17 +13,16 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 export function Formulario({ setDatos, datos }) {
+  // const [aviso, setAviso] = useState(true);
   const [año, setAño] = useState([]);
   console.log(año);
-  // Animacion Aos settting:
+
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
-  // const [aviso, setAviso] = useState(true);
   const dispatch = useDispatch();
   const history = useHistory();
-
   const date = `${año}-${datos.month}-${datos.day}`;
 
   const handleSubmit = (e) => {
@@ -69,7 +68,7 @@ export function Formulario({ setDatos, datos }) {
             <div className="formulario__info-text" data-aos="fade-up">
               <h2 className="formulario__title">Bienvenido a Skycomeet</h2>
               <p>
-                Skycomeet te sirve para ver que foto se tomó al espacio el día
+                Skycomeet te sirve para ver que foto exhibió la NASA APOD el día
                 de tu cumpleaños, para verlas en un formato divertido y que
                 puedes compartir con amigos.
               </p>
@@ -93,7 +92,7 @@ export function Formulario({ setDatos, datos }) {
             <div className="formulario__info-text-right" data-aos="fade-up">
               <h2 className="formulario__title">Bienvenido a Skycomeet</h2>
               <p>
-                Skycomeet te sirve para ver que foto se tomó al espacio el día
+                Skycomeet te sirve para ver que foto exhibió la NASA APOD el día
                 de tu cumpleaños, para verlas en un formato divertido y que
                 puedes compartir con amigos.
               </p>
